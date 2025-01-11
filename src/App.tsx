@@ -68,12 +68,13 @@ function App() {
     <div className={`min-h-screen ${isDarkMode ? 'bg-black text-white' : 'bg-white text-black'} px-4 sm:px-6 lg:px-8 py-12`} style={{ fontFamily: 'MajorMonoDisplay, sans-serif' }}>
       <div className="max-w-3xl mx-auto relative">
         <button onClick={toggleDarkMode} className="absolute top-4 right-4">
-          <img src={isDarkMode ? './svgs/toggle_on.svg' : './svgs/toggle_off.svg'} alt="Toggle Dark Mode" className="w-12 h-12" />
+          <img src={isDarkMode ? './svgs/light_mode.svg' : './svgs/dark_mode.svg'} alt="Toggle Dark Mode" className="w-10 h-10" />
         </button>
         <div className="text-center mb-16">
           <img src="./logo_main.png" alt="logo" className="w-40 h-40 text-gray-900 mx-auto mb-6" />
           <h1 className="text-4xl font-bold mb-8 tracking-tight" style={{ fontFamily: 'MajorMonoDisplay, sans-serif' }}>
-            Kanha<br />Inter-Region Competition
+          <span >Kanha</span><br />
+          <span style={{ display: 'block', marginTop: '5px' }}>Inter-Region Competition</span>
           </h1>
           <div className="inline-flex flex-col items-center">
             <span className="text-lg font-bold text-black-500 mb-2">Current Stage</span>
