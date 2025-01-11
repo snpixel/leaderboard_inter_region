@@ -8,15 +8,15 @@ interface Team {
 
 function App() {
   const [teams] = useState<Team[]>([
-    { name: 'Delhi Region', points: Math.floor(Math.random() * 1000), logo: 'public/delhi.png' },
-    { name: 'Bengaluru Region', points: Math.floor(Math.random() * 1000), logo: 'public/bengaluru.png' },
-    { name: 'Chandigarh Region', points: Math.floor(Math.random() * 1000), logo: 'public/chandigarh.png' },
-    { name: 'Lucknow Region', points: Math.floor(Math.random() * 1000), logo: 'public/lucknow.png' },
-    { name: 'Chennai Region', points: Math.floor(Math.random() * 1000), logo: 'public/chennai.png' },
-    { name: 'Mumbai Region', points: Math.floor(Math.random() * 1000), logo: 'public/mumbai.png' },
-    { name: 'Patna Region', points: Math.floor(Math.random() * 1000), logo: 'public/bihar.png' },
-    { name: 'Hyderabad Region', points: Math.floor(Math.random() * 1000), logo: 'public/hyderabad.png' },
-    { name: 'Kolkata Region', points: Math.floor(Math.random() * 1000), logo: 'public/kolkata.png' },
+    { name: 'Delhi Region', points: Math.floor(Math.random() * 1000), logo: './delhi.png' },
+    { name: 'Bengaluru Region', points: Math.floor(Math.random() * 1000), logo: './bengaluru.png' },
+    { name: 'Chandigarh Region', points: Math.floor(Math.random() * 1000), logo: './chandigarh.png' },
+    { name: 'Lucknow Region', points: Math.floor(Math.random() * 1000), logo: './lucknow.png' },
+    { name: 'Chennai Region', points: Math.floor(Math.random() * 1000), logo: './chennai.png' },
+    { name: 'Mumbai Region', points: Math.floor(Math.random() * 1000), logo: './mumbai.png' },
+    { name: 'Patna Region', points: Math.floor(Math.random() * 1000), logo: './bihar.png' },
+    { name: 'Hyderabad Region', points: Math.floor(Math.random() * 1000), logo: './hyderabad.png' },
+    { name: 'Kolkata Region', points: Math.floor(Math.random() * 1000), logo: './kolkata.png' },
   ].sort((a, b) => b.points - a.points));
 
   const POINTS_LIMIT = 1000;
