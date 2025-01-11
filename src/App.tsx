@@ -50,7 +50,7 @@ function App() {
     <div className="min-h-screen bg-white px-4 sm:px-6 lg:px-8 py-12">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-16">
-          <img src="public\logo_main.png" alt="logo" className="w-40 h-40 text-gray-900 mx-auto mb-6" />
+          <img src="./logo_main.png" alt="logo" className="w-40 h-40 text-gray-900 mx-auto mb-6" />
           <h1 className="text-3xl font-light mb-8 tracking-tight">
             Kanha Inter-Region Competition
           </h1>
