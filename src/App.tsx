@@ -8,18 +8,19 @@ interface Team {
 
 function App() {
   const [teams] = useState<Team[]>([
-    { name: 'Delhi Region', points: 850, logo: './delhi.png' },
-    { name: 'Bengaluru Region', points: 920, logo: './bengaluru.png' },
-    { name: 'Chandigarh Region', points: 780, logo: './chandigarh.png' },
-    { name: 'Lucknow Region', points: 640, logo: './lucknow.png' },
-    { name: 'Chennai Region', points: 710, logo: './chennai.png' },
-    { name: 'Mumbai Region', points: 900, logo: './mumbai.png' },
-    { name: 'Patna Region', points: 670, logo: './bihar.png' },
-    { name: 'Hyderabad Region', points: 730, logo: './hyderabad.png' },
-    { name: 'Kolkata Region', points: 800, logo: './kolkata.png' },
+    { name: 'Delhi Region', points: 320, logo: './delhi.png' },
+    { name: 'Lucknow Region', points: 240, logo: './bengaluru.png' },
+    { name: 'Chandigarh Region', points: 135, logo: './chandigarh.png' },
+    { name: 'Mumbai Region', points: 40, logo: './lucknow.png' },
+    { name: 'Patna Region', points: 35, logo: './chennai.png' },
+    { name: 'Bengaluru Region', points: 35, logo: './mumbai.png' },
+    { name: 'Kolkata Region', points: 5, logo: './bihar.png' },
+    { name: 'Chennai Region', points: 0, logo: './hyderabad.png' },
+    { name: 'Hyderabad Region', points: -25, logo: './kolkata.png' },
   ].sort((a, b) => b.points - a.points));
 
-  const POINTS_LIMIT = 1000;
+  const POINTS_LIMIT = 350;
+  const MIN_POINTS = -70;
 
   const [isDarkMode, setIsDarkMode] = useState(false);
 
@@ -77,9 +78,9 @@ function App() {
           <span style={{ display: 'block', marginTop: '5px' }}>Inter-Region Competition</span>
           </h1>
           <div className="inline-flex flex-col items-center">
-            <span className="text-lg font-bold text-black-500 mb-2">Current Stage</span>
+            
             <div className="px-8 py-3 bg-gradient-to-r from-gray-100 via-white to-gray-100 rounded-2xl border-2 border-gray-200 text-2xl font-medium text-gray-800 shadow-sm">
-              Day 1
+              Final Scores
             </div>
           </div>
         </div>
@@ -113,7 +114,7 @@ function App() {
                   <div
                     className={`h-full rounded-full animate-bar ${fillerColor}`}
                     style={{
-                      '--target-width': `${(team.points / POINTS_LIMIT) * 100}%`
+                      '--target-width': `${((team.points - MIN_POINTS) / (POINTS_LIMIT - MIN_POINTS)) * 100}%`
                     } as React.CSSProperties}
                   />
                 </div>
